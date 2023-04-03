@@ -14,11 +14,10 @@ export default function Media() {
         event.preventDefault()
         const media ={name,id}
         console.log(media)
-        fetch("http://localhost:8080/get_media", {method:"Post",
-            headers:{"Content-Type":"application/json"},
-            body:JSON.stringify(media)})
+        fetch("http://localhost:8080/get_media", {method:"get", mode:"no-cors"}
 
-            .then(()=>{console.log("Media added")})
+
+            .then(()=>{console.log("Media added")}))
     }
 
 useEffect(()=>{
